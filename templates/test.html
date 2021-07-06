@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome to my page</h1>
+    <h3> my application</h3>
+    <p>
+      This is the demo application for the course
+        <em>Getting Started with Flask on </em>
+        <a href = "https://flask.palletsprojects.com/en/2.0.x/">My Flask App</a>
+    </p>
+     <h2> My Cards</h2>
+    {{ cards }}
+        <ul>
+            {% for item in cards  %}
+                <li>
+                    <a href="{{url_for ('cards_view', index= loop.index0) }}">
+                        {{ item.color }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    <img src="/static/flask-logo.png">
+    <p>{{message}}</p>
+</body>
+</html>

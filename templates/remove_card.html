@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove card</title>
+</head>
+<body>
+    <h1> remove card</h1>
+      color: {{cards.color}} <br>
+    type: {{cards.type}} <br>
+    category: {{cards.category}} <br>
+    type: {{cards.type}} <br>
+    code:{{cards.rgba}} <br>
+    hex:{{cards.hex}}
+    <h2> Are you sure</h2>
+    <form method="post">
+        <button type="submit" >yes</button>
+        <a href="{{ url_for('add_cards')}}">No</a>
+    </form>
+</body>
+</html>

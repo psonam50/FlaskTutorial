@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards</title>
+</head>
+<body>
+  <h1> Color Cards</h1>
+    color: {{cards.color}} <br>
+    type: {{cards.type}} <br>
+    category: {{cards.category}} <br>
+    type: {{cards.type}} <br>
+    code:{{cards.rgba}} <br>
+    hex:{{cards.hex}}
+    <p>
+        <a href="{{ url_for('welcome') }}">HOME</a>
+
+
+        <button>
+        {% if index < max_index %}
+           <a href="{{ url_for('cards_view', index=index+1)}}">
+               NEXT CARD
+           </a>
+        {% else %}
+            <a href="{{ url_for('cards_view', index=0)}}">
+                START OVER
+            </a>
+        {% endif %}
+
+    </button>
+           </p>
+            <a href="{{ url_for('remove_cards', index=index)}}">remove</a>
+
+
+</body>
+</html>
